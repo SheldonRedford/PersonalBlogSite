@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheldon Redford's Retro Blog</title>
+    <style>
+        /* Vibrant retro background gradient */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(45deg, #ff6699, #66ccff, #ffcc33, #33ff99);
+            background-size: 400% 400%;
+            animation: colorShift 8s ease infinite;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes colorShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            background-color: #ff3366;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 3em;
+            text-shadow: 3px 3px #222;
+            border-bottom: 6px solid #ffcc33;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 0 20px #33ff99;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px #000;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff3366, #66ff99, #33ccff);
+            color: white;
+            border: 2px solid #ffcc33;
+            padding: 12px 24px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 15px 0;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #ffcc33;
+            color: #333;
+            border: 2px solid #33ccff;
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Hide content and post by default */
+        #post-page {
+            display: none;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        /* Retro fonts and colors for full posts */
+        .content p {
+            color: #f2f2f2;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        /* Return button */
+        .back-btn {
+            background-color: #ff6699;
+            color: white;
+            border: 2px solid #ffcc33;
+            padding: 10px 20px;
+            margin: 20px 0;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 10px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn:hover {
+            background-color: #ffcc33;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    Sheldon Redford's Blog
+</header>
+
+<div class="container" id="main-page">
+    <!-- Main Blog Post Previews -->
+    <div class="post">
+        <h2>Who am I?</h2>
+        <button onclick="showPost(0)">Read More</button>
+    </div>
+
+    <div class="post">
+        <h2>Who Are We?</h2>
+        <button onclick="showPost(1)">Read More</button>
+    </div>
+
+    <div class="post">
+        <h2>How Will AI Impact Science in the Next 50 Years?</h2>
+        <button onclick="showPost(2)">Read More</button>
+    </div>
+
+    <div class="post">
+        <h2>How Do Phones and Social Media Affect Childhood?</h2>
+        <button onclick="showPost(3)">Read More</button>
+    </div>
+</div>
+
+<!-- Post Page for Displaying Full Post -->
+<div class="container" id="post-page">
+    <h2 id="post-title"></h2>
+    <div class="content" id="post-content"></div>
+    <button class="back-btn" onclick="goBack()">Back to Posts</button>
+</div>
+
+<script>
+    const posts = [
+        {
+            title: "Who am I?",
+            content: `
+                <p><strong>Who am I?</strong></p>
+                <p>My name is Sheldon Redford, I am a 16 year old highschool student, and this is my first post. I really wanted this post to be a reflection of my way of thinking while answering a question that has an opinion based answer.</p>
+                
+                <p><strong>Is it harder to grow up in the 21st century than it was in the past?</strong></p>
+                <p>I believe that growing up now is much harder in the 21st century as opposed to previous centuries. Now there are many more issues and problems to face. An example of this is bullying. Now you can bully people completely anonymously and nobody will ever know it’s you. Along with this, it’s more socially acceptable, (borderline desirable,) to be a bully or partake in it. Another huge topic to discuss is the price of living and how much this increase affects your plans and behavior. With the cost of basic needs such as a vehicle, gasoline, rent, food, post-secondary education, being so high, this can completely alter and restrict a person's aspirations and potential. Another thing to pair with this is also an overlaying expectation of an increase in performance compared to the last generation or previous century. Like I previously said, it's more difficult to attain basic needs, however this pairs perfectly with an increased expectation of achievements and functionality, as it's harder to do so.</p>
+                
+                <p><strong>What role does stress play in your life?</strong></p>
+                <p>I believe the role stress plays a fluctuation role in my life. Stress will cycle between dictating my life and then also providing no influence. I feel that stress is a very controlling and restricting thing to experience, and I personally find it interesting when exploring the causes of it. For me, I can experience stress throughout many day-to-day activities, such as social interactions, school work, family relationships, well-being of others, and responsibilities. Though along with my interest in its causes, I’m also interested in the effects of stress. I personally can observe stress to be a restricting feeling, as it limits your ability to think critically while maintaining clarity of thought. It often distracts you from what matters most. Along with this, stress also limits your confidence, as long as you’re stressing about anything to do with yourself or your well-being, as you’re more susceptible to overthinking and taking things too seriously. Overall, I believe stress can have a severe effect on one's ability to think critically and their ability to work and solve problems.</p>
+            `
+        },
+        {
+    title: "Who Are We?",
+    content: `
+        <p>Post 2: Who Are We?</p>
+        <p>In this post, I want to share my reflections on a recent class activity that focused on connecting with my classmates. This exercise was successfully aimed towards growing our social skills and giving ourselves a greater perspective, as it encouraged us to learn more about each other.</p>
+        <p>During our Composition class, we participated in a question-and-answer session where we asked various classmates different questions. I had the chance to connect with 22 people, and it was a rewarding experience. Through these conversations, I learned about a variety of interests and backgrounds. For instance, Beatrice is an exchange student from Italy who speaks multiple languages. Kaitlyn enjoys baking depending on her mood, while Ivan, also here on exchange from Germany, plays an instrument. Ashley has traveled to the U.S., and Amelia is an avid reader. Kai is an artist who shares his music on SoundCloud, Roby is dedicated to the volleyball team, and Jack has the unique hobby of swimming in the ocean during winter.</p>
+        <p>Our teacher, Mr. Bambrough, has also been open about his own interests. He loves travel and literature, holds a degree in creative writing, and even leads the Ballenas Cinema Club.</p>
+        <p>Overall, this activity displayed the diversity in our classroom and helped us to connect with one another allowing further connection to be achieved if desired. It’s important to appreciate our differences while also finding common ground, and actively practice doing so as social media’s effects on our generation's social skills are tremendous.</p>
+    `
+}
+,
+        {
+            title: "How Will AI Impact Science in the Next 50 Years?",
+            content: `
+                <p>In this post, I want to tackle the thought on how Artificial Intelligence (AI) will change the future of science. AI already plays a significant role in scientific advancements and everyday life, but what might the future hold in the next five decades?... </p>
+                <p>AI may revolutionize areas like medical diagnostics, robotics, and autonomous technologies, making processes more efficient and enabling discoveries that were once thought impossible. </p>
+            `
+        },
+        {
+            title: "How Do Phones and Social Media Affect Childhood?",
+            content: `
+                <p>It’s hard to imagine childhood today without phones and social media. In this post, I’d like to explore how these tools are changing the way kids grow up and whether they are more of a positive or negative influence... </p>
+                <p>Phones and social media provide kids with instant access to information and connections, but they can also result in a lot of stress, misinformation, or bullying in online spaces...</p>
+            `
+        }
+    ];
+
+    function showPost(index) {
+        document.getElementById('main-page').style.display = 'none';
+        document.getElementById('post-page').style.display = 'block';
+        document.getElementById('post-title').innerHTML = posts[index].title;
+        document.getElementById('post-content').innerHTML = posts[index].content;
+    }
+
+    function goBack() {
+        document.getElementById('post-page').style.display = 'none';
+        document.getElementById('main-page').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
