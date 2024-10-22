@@ -88,6 +88,14 @@
             line-height: 1.8;
         }
 
+        /* Image styling */
+        .content img {
+            width: 80%; /* Set image width to 80% of the container */
+            height: auto;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+
         /* Return button */
         .back-btn {
             background-color: #ff6699;
@@ -147,69 +155,74 @@
 </div>
 
 <script>
-    const posts = [
-        {
-            title: "How Do Phones and Social Media Affect Childhood?",
-            date: "October 10th, 2024",
-            content: `
-                <p>I believe that growing up with phones and social media is terrible for the children that experience it and disappointing to those viewing it, and for good reason.</p>
+const posts = [
+    {
+        title: "How Do Phones and Social Media Affect Childhood?",
+        date: "October 10th, 2024",
+        content: `
+            <p>I believe that growing up with phones and social media is terrible for the children that experience it and disappointing to those viewing it, and for good reason.</p>
+                <img src="IMG1.jpg" alt="Kids on phones, not talking to each other">
                 <p>I remember vividly the desire to own a phone at a young age. However, looking back on it, owning a phone throughout my childhood did nothing but restrict it in a lot of ways, mainly socially. I find myself frequently envisioning what an uncomfortable or awkward social setting would be like without a phone, and what I see is a solution. I see the people awkwardly talk, I see them being forced to feel that pressure, that feeling of “I Hate every second of this,” and I believe being forced through that, you find ways to make it better in the future. However, I feel that now, if you don’t know what to say to someone, as soon as you feel that awkwardness creep in, you can instantly and effectively alleviate yourself from that situation. There is no reason to develop social skills if you can find a way to escape that awkwardness much easier. Another piece of evidence to support that phones have an impact on social skills is looking at previous generations, generations that grew up without the means to effortlessly have something to pay attention to. You can notice that these generations have less social anxiety.</p>
+                <img src="IMG2.jpg" alt="Person on phone with kids socializing behind them">
                 <p>The topic of social media will also never fail to come to mind. The issue with social media is that you constantly see it with your phone. But what are you actually seeing? You are seeing only the amazing parts of a horrible life. In the form of a young, rich, usually attractive and popular person. However, these celebrities are quite blind when it comes to their influence. They don’t understand that not only will people want to be them and want the things they have, but they will actively try to be them and do the things they do because they define success to the youth. They don’t understand that we are going to compare ourselves to them, as they are successful to us. But it’s ridiculous to compare yourself to the most beautiful people on the planet or the most talented, leading to the thought “I suck.” This thought may plague every inch of your thought causing serious mental health problems.</p>
+                <img src="IMG3.jpg" alt="Split image of a rich person and a normal person">
                 <p>Another huge issue with phones is that it leads to a dopamine addiction. Just like every addiction, phones will give your brain a nice shot of dopamine whenever you see something funny, or an attractive person, or really anything that would make you happy. However, every mainstream company and corporation strives to give you nothing but what you want, more dopamine. So they create AI and algorithms to deliver as much of it to you as possible, leaving you feeling less happy when not consuming content. This blends nicely with the fact that you have poor social skills and have trouble talking to people, causing a need to escape the real world.</p>
                 <p>An annoying problem with them also is you’re able to do so many amazing things with your phone; you have access to the internet, and along with it, everything that it entails: educational videos on nearly everything you could possibly be curious about, highly sophisticated cameras, advanced scientific calculators, video games, and everything else. It’s an incredible tool and it has so many amazing things about it. I feel that if I asked somebody why phones are great, the last thing they would think of is how they actually use their phone, and that's a huge issue in the fact that you associate it in the first place with an amazing thing.</p>
-                <p>Overall I think that phones greatly negatively affect the lives of the youth. There are zero cases in anybody I know, including myself, where I can say that that person owning a phone has positively affected that person's health. I hope that moving forward as a society and species we can focus on the elimination of social media, and at least a suppression. Phones are bad, I hope you can now see why.</p>
-            `
-        },
-        {
-            title: "How Will AI Impact Science in the Next 50 Years?",
-            date: "September 20th, 2024",
-            content: `
-                <p>In this post, I want to tackle the thought on how Artificial Intelligence (AI) will change the future of science. AI already plays a significant role in scientific advancements and everyday life, but what might the next fifty years hold?</p>
-                <p>Firstly, AI's ability to process vast amounts of data faster than any human can is remarkable. For instance, AI algorithms are used in genomics to analyze DNA sequences, discovering patterns and mutations that would take researchers years to identify. With AI's assistance, we can expect breakthroughs in personalized medicine, where treatments can be tailored to individual genetic profiles.</p>
-                <p>Moreover, AI will revolutionize research methodologies. Imagine virtual labs where experiments can be simulated before they are conducted. This will not only save time but also reduce costs and minimize errors. As AI continues to evolve, it will become a standard tool for researchers across various fields, enhancing collaboration and accelerating the pace of scientific discovery.</p>
-                <p>Another area where AI will shine is in the realm of climate science. AI can help predict climate patterns, analyze environmental changes, and even assist in developing sustainable solutions. With pressing global challenges such as climate change, AI will be essential in finding innovative ways to address these issues.</p>
-                <p>Lastly, the ethical implications of AI in science will also become a focal point. As AI systems are integrated into research processes, discussions around data privacy, bias in algorithms, and the responsibility of AI-driven decisions will be crucial. Scientists will need to navigate these challenges carefully to ensure that AI serves the greater good.</p>
-                <p>In conclusion, AI is set to significantly influence the future of science in the coming decades. From enhancing research capabilities to addressing global challenges, the possibilities are immense. However, it is equally important to remain vigilant about the ethical considerations surrounding AI's integration into science.</p>
-            `
-        },
-        {
-            title: "Who Are We?",
-            date: "September 13th, 2024",
-            content: `
-                <p>This post aims to explore the essence of identity and what it means to be human in today's fast-paced world. In a society that is constantly evolving, understanding our core values and beliefs is essential.</p>
-                <p>Who are we, really? Are we the sum of our experiences, our relationships, or our aspirations? Each person has a unique story shaped by their environment, culture, and personal choices. The interactions we have and the lessons we learn contribute to our identity, making it a complex tapestry.</p>
-                <p>In today's digital age, our identities are often influenced by social media and public perception. We tend to curate our online personas, showcasing the highlights of our lives while hiding the struggles. This can create a disconnect between who we truly are and how we present ourselves to the world.</p>
-                <p>Ultimately, understanding who we are requires introspection and honesty. It involves embracing our flaws and celebrating our strengths. By doing so, we can foster genuine connections with others and cultivate a deeper sense of belonging in our communities.</p>
-            `
-        },
-        {
-            title: "Who am I?",
-            date: "September 12th, 2024",
-            content: `
-                <p>In this introductory post, I want to share a little about myself and my journey. My name is Sheldon Redford, and I have a passion for exploring various topics that spark curiosity and creativity.</p>
-                <p>Growing up, I was always fascinated by the stories people tell and the lessons they impart. This blog is a platform for me to express my thoughts and engage with others who share similar interests. I believe that sharing ideas can inspire change and foster understanding among people from diverse backgrounds.</p>
-                <p>Through my writing, I hope to create a space where readers can reflect on their own experiences and connect with the world around them. I look forward to sharing my insights and learning from all of you in this journey.</p>
-            `
-        }
-    ];
+                <p>Overall I think that phones greatly negatively affect the lives of the youth today and will lead to a horrible fate for humanity. As a society, we begin to look at the issue of technology and its effect on the youth, because if we don’t, I feel that we are leading ourselves into a horrible fate.</p>
+                <img src="IMG4.jpg" alt="Brain plugged into a phone, emphasizing addiction">        `
+    },
+    {
+        title: "How Will AI Impact Science in the Next 50 Years?",
+        date: "September 20th, 2024",
+        content: `
+            <p>In this post, I want to tackle the thought on how Artificial Intelligence (AI) will change the future of science. To answer this question, it’s important to first understand what science and AI really are.</p>
+                <p>Science is the systematic study of the natural and physical world, built on observations, predictions, experiments, and testing. It’s split into two broad categories: natural science (like physics, biology, and chemistry) and behavioral science (like psychology, sociology, and economics).</p>
+                <p>Now let’s look at AI. Right now, AI is most effective in areas like language processing—where it can predict outcomes or analyze complex variables based on existing data. However, when it comes to more advanced scientific problems, AI has its limits. It can’t think creatively or solve problems in innovative ways like humans can. That means, for AI to truly revolutionize science, it will need to evolve.</p>
+                <p>Will AI ever be able to think "outside the box"? As of now, it’s great at processing vast amounts of information but can’t generate truly original ideas, the way it works is purely off input. As throughout most of history, great scientific discoveries tend to come from looking at something differently and having a different interpretation of data than everybody else. If AI ever gains the ability to think creatively, it could potentially solve some of the biggest scientific challenges, like finding a cure for cancer, climate change, and unraveling the mysteries of the universe. But that remains to be unseen.</p>
+                <p>Personally, I believe that unless AI learns to be more creative, it won’t be able to outthink the human mind when it comes to complex, unsolved problems. Humans have the ability to imagine and create new solutions, the ability to look at something and see what it's made of, what it is, but most importantly what it can be, something that AI still lacks. However, if AI evolves to think creatively, it could completely transform the way we solve scientific problems.</p>
+        `
+    },
+    {
+        title: "Who Are We?",
+        date: "September 13th, 2024",
+        content: `
+            <p>In this post, I want to share my reflections on a recent class activity that focused on connecting with my classmates. This exercise was successfully aimed towards growing our social skills and giving ourselves a greater perspective, as it encouraged us to learn more about each other.</p>
+        <p>During our Composition class, we participated in a question-and-answer session where we asked various classmates different questions. I had the chance to connect with 22 people, and it was a rewarding experience. Through these conversations, I learned about a variety of interests and backgrounds. For instance, Beatrice is an exchange student from Italy who speaks multiple languages. Kaitlyn enjoys baking depending on her mood, while Ivan, also here on exchange from Germany, plays an instrument. Ashley has traveled to the U.S., and Amelia is an avid reader. Kai is an artist who shares his music on SoundCloud, Roby is dedicated to the volleyball team, and Jack has the unique hobby of swimming in the ocean during winter.</p>
+        <p>Our teacher, Mr. Bambrough, has also been open about his own interests. He loves travel and literature, holds a degree in creative writing, and even leads the Ballenas Cinema Club.</p>
+        <p>Overall, this activity displayed the diversity in our classroom and helped us to connect with one another allowing further connection to be achieved if desired. It’s important to appreciate our differences while also finding common ground, and actively practice doing so as social media’s effects on our generation's social skills are tremendous.</p>
+        `
+    },
+    {
+        title: "Who am I?",
+        date: "September 12th, 2024",
+        content: `
+             <p>My name is Sheldon Redford, I am a 16-year-old high school student, and this is my first post. I really wanted this post to be a reflection of my way of thinking while answering a question that has an opinion-based answer.</p>
+        <p><strong>Is it harder to grow up in the 21st century than it was in the past?</strong></p>
+        <p>I believe that growing up now is much harder in the 21st century as opposed to previous centuries. Now there are many more issues and problems to face. An example of this is bullying. Now you can bully people completely anonymously and nobody will ever know it’s you. Along with this, it’s more socially acceptable (borderline desirable) to be a bully or partake in it. Another huge topic to discuss is the price of living and how much this increase affects your plans and behavior. With the cost of basic needs such as a vehicle, gasoline, rent, food, post-secondary education, being so high, this can completely alter and restrict a person's aspirations and potential. Another thing to pair with this is also an overlaying expectation of an increase in performance compared to the last generation/previous century. Like I previously said, it's more difficult to attain basic needs; however, this pairs perfectly with an increased expectation of achievements and functionality, as it's harder to do so.</p>
+        <p><strong>What role does stress play in your life?</strong></p>
+        <p>I believe the role stress plays is a fluctuating role in my life. Stress will cycle between dictating my life and then also providing no influence. I feel that stress is a very controlling and restricting thing to experience, and I personally find it interesting when exploring the causes of it. For me, I can experience stress throughout many day-to-day activities, such as social interactions, schoolwork, family relationships, the well-being of others, and responsibilities. Though along with my interest in its causes, I’m also interested in the effects of stress. I personally can observe stress to be a restricting feeling, as it limits your ability to think critically while maintaining clarity of thought; it often distracts you from what matters most. Along with this, stress also limits your confidence, as long as you’re stressing about anything to do with yourself or your well-being, as you’re more susceptible to overthinking and taking things too seriously. Overall, I believe stress can have a severe effect on one's ability to think critically and their ability to work and solve problems.</p>
+        `
+    }
+];
 
     function showPost(index) {
         const post = posts[index];
-        document.getElementById("post-title").innerText = post.title;
-        document.getElementById("post-date").innerText = `Published on: ${post.date}`;
-        document.getElementById("post-content").innerHTML = post.content;
+        document.getElementById('post-title').innerText = post.title;
+        document.getElementById('post-date').innerText = post.date;
+        document.getElementById('post-content').innerHTML = post.content;
 
-        // Show post page and hide main page
-        document.getElementById("main-page").style.display = "none";
-        document.getElementById("post-page").style.display = "block";
+        // Hide main page and show post page
+        document.getElementById('main-page').style.display = 'none';
+        document.getElementById('post-page').style.display = 'block';
     }
 
     function goBack() {
-        // Show main page and hide post page
-        document.getElementById("main-page").style.display = "block";
-        document.getElementById("post-page").style.display = "none";
+        // Hide post page and show main page
+        document.getElementById('post-page').style.display = 'none';
+        document.getElementById('main-page').style.display = 'block';
     }
 </script>
 
 </body>
 </html>
+
